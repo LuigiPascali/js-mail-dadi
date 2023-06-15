@@ -35,6 +35,8 @@
 //     console.log("Draw!");
 // }
 
+/* ------------------------------ */
+
 // Variabili per tenere traccia dei punteggi
 let barneyScore = 0;
 let frinkScore = 0;
@@ -59,6 +61,12 @@ function playGame() {
       alert(message);
       if (barneyScore === 5) {
         alert("Barney: Dammi la cassa di Duff che mi spetta!!!!");
+        barneyScore = 0; // Azzera il punteggio di Barney
+        frinkScore = 0; // Azzera il punteggio di Prof. Frink
+        tieScore = 0; // Azzera il punteggio dei pareggi
+        document.getElementById("barney-score").innerHTML = barneyScore;
+        document.getElementById("frink-score").innerHTML = frinkScore;
+        document.getElementById("tie-score").innerHTML = tieScore;
       }
     }, 50);
   } else if (frinkRoll > barneyRoll) {
@@ -69,6 +77,12 @@ function playGame() {
       alert(message);
       if (frinkScore === 5) {
         alert("Prof Frink: Ora la tua anima è MIAAAAAAA!!!!");
+        barneyScore = 0; // Azzera il punteggio di Barney
+        frinkScore = 0; // Azzera il punteggio di Prof. Frink
+        tieScore = 0; // Azzera il punteggio dei pareggi
+        document.getElementById("barney-score").innerHTML = barneyScore;
+        document.getElementById("frink-score").innerHTML = frinkScore;
+        document.getElementById("tie-score").innerHTML = tieScore;
       }
     }, 50);
   } else {
