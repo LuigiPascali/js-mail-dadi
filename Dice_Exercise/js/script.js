@@ -57,6 +57,9 @@ function playGame() {
     const message = "Barney Win!...Buurp!!";
     setTimeout(function() {
       alert(message);
+      if (barneyScore === 5) {
+        alert("Barney: Dammi la cassa di Duff che mi spetta!!!!");
+      }
     }, 50);
   } else if (frinkRoll > barneyRoll) {
     // Prof. Frink vince
@@ -64,6 +67,9 @@ function playGame() {
     const message = "Prof. Frink Win!";
     setTimeout(function() {
       alert(message);
+      if (frinkScore === 5) {
+        alert("Prof Frink: Ora la tua anima è MIAAAAAAA!!!!");
+      }
     }, 50);
   } else {
     // Pareggio
