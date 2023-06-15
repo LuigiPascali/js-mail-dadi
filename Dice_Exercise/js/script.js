@@ -13,19 +13,20 @@
   
   Stampo in console il risultato
 
+  Fine.
 */
 
-// // Genero un numero casuale da 1 a 6 per il player
+//   Genero un numero casuale da 1 a 6 per il player
 //  const playerResult = Math.floor(Math.random() * 6) + 1;
 
-// // Genero un numero casuale da 1 a 6 per il computer
+//   Genero un numero casuale da 1 a 6 per il computer
 //  const computerResult = Math.floor(Math.random() * 6) + 1;
 
-// // Stampo i punteggi del player e del computer
+//   Stampo i punteggi del player e del computer
 //  console.log("Player: " + playerResult);
 //  console.log("Computer: " + computerResult);
 
-// // Determino il vincitore in base al punteggio più alto
+//   Determino il vincitore in base al punteggio più alto
 //   if (playerResult > computerResult) {
 //     console.log("Player Win!");
 // } else if (playerResult < computerResult) {
@@ -36,8 +37,8 @@
 
 function playGame() {
   // Genero un numero casuale da 1 a 6 per i due player
-    let barneyRoll = Math.floor(Math.random() * 12) + 1;
-    let frinkRoll = Math.floor(Math.random() * 12) + 1;
+    let barneyRoll = Math.floor(Math.random() * 6) + 1;
+    let frinkRoll = Math.floor(Math.random() * 6) + 1;
   
   // Aggiorno il contenuto degli elementi HTML per visualizzare il risultato dei lanci dei dadi
     document.getElementById("barney-dice").innerHTML = "Barney rolled a " + barneyRoll;
@@ -49,7 +50,7 @@ function playGame() {
   // Determino il vincitore in base ai punteggi ottenuti e utilizzo setTimeout per ritardare l'apertura dell'alert
     if (barneyRoll > frinkRoll) {
       winner = "Barney";
-      const message = "Barney Win!";
+      const message = "Barney Win!...Buurp!!";
       setTimeout(function() {
         alert(message);
       }, 50);
