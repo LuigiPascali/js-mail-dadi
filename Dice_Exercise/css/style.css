@@ -3,16 +3,26 @@
 */
 .card-img-top {width: 100%;object-fit: cover; max-height: 18.75rem;}
 
-.card {border: none;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);transition: all 0.3s ease-in-out;}
+.card {background: linear-gradient(to bottom, var(--bg_card_1), var(--bg_card_2), var(--bg_card_3));border: none;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);transition: all 0.3s ease-in-out;}
   
 .card:hover {transform: translateY(-5px);box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);}
   
 .card-body {padding: 1.5rem;}
   
-.card-title {font-size: 1.5rem;font-weight: bold;margin-bottom: 1rem;}
+.card-title {font-size: 1.5rem;font-weight: bold;margin-bottom: 1rem; color: var(--light_color);}
   
-.card-text {font-size: 1rem;margin-bottom: 1rem;}
+.card-text {font-size: 1rem;margin-bottom: 1rem; color: var(--light_color);}
  
 .btn-play {color: var(--light_color);border: none;border-radius: 5px;padding: 0.5rem 1rem;font-size: 1rem;font-weight: bold;transition: all 0.3s ease-in-out;}
-  
+
 .btn-play:hover {background-color: var(--hover_color);cursor: pointer;}
+
+.dice-result {font-size: 24px;font-weight: bold;color: var(--bg_card_3);}
+  
+
+  
+
+
+  
+
+  

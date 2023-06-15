@@ -35,36 +35,47 @@
 //     console.log("Draw!");
 // }
 
-function playGame() {
-  // Genero un numero casuale da 1 a 6 per i due player
-    let barneyRoll = Math.floor(Math.random() * 6) + 1;
-    let frinkRoll = Math.floor(Math.random() * 6) + 1;
-  
-  // Aggiorno il contenuto degli elementi HTML per visualizzare il risultato dei lanci dei dadi
-    document.getElementById("barney-dice").innerHTML = "Barney rolled a " + barneyRoll;
-    document.getElementById("frink-dice").innerHTML = "Prof. Frink rolled a " + frinkRoll;
-  
-  // Creao la variabile per memorizzare il vincitore 
-    let winner;
+// Variabili per tenere traccia dei punteggi
+let barneyScore = 0;
+let frinkScore = 0;
+let tieScore = 0;
 
-  // Determino il vincitore in base ai punteggi ottenuti e utilizzo setTimeout per ritardare l'apertura dell'alert
-    if (barneyRoll > frinkRoll) {
-      winner = "Barney";
-      const message = "Barney Win!...Buurp!!";
-      setTimeout(function() {
-        alert(message);
-      }, 50);
-    } else if (frinkRoll > barneyRoll) {
-      winner = "Prof. Frink";
-      const message = "Prof. Frink Win!";
-      setTimeout(function() {
-        alert(message);
-      }, 50);
-    } else {
-      winner = "It's a Tie!";
-      const message = "It's a Tie!";
-      setTimeout(function() {
-        alert(message);
-      }, 50);
-    }
+// Funzione per lanciare i dadi e determinare il vincitore
+function playGame() {
+  // Genero un numero casuale da 1 a 6 per i due giocatori
+  let barneyRoll = Math.floor(Math.random() * 6) + 1;
+  let frinkRoll = Math.floor(Math.random() * 6) + 1;
+
+  // Aggiorno il contenuto degli elementi HTML per visualizzare il risultato dei lanci dei dadi
+  document.getElementById("barney-dice").innerHTML = "Barney rolled a " + barneyRoll;
+  document.getElementById("frink-dice").innerHTML = "Prof. Frink rolled a " + frinkRoll;
+
+  // Determino il vincitore in base ai punteggi ottenuti
+  if (barneyRoll > frinkRoll) {
+    // Barney vince
+    barneyScore++; // Incrementa il punteggio di Barney
+    const message = "Barney Win!...Buurp!!";
+    setTimeout(function() {
+      alert(message);
+    }, 50);
+  } else if (frinkRoll > barneyRoll) {
+    // Prof. Frink vince
+    frinkScore++; // Incrementa il punteggio di Prof. Frink
+    const message = "Prof. Frink Win!";
+    setTimeout(function() {
+      alert(message);
+    }, 50);
+  } else {
+    // Pareggio
+    tieScore++; // Incrementa il punteggio dei pareggi
+    const message = "It's a Tie!";
+    setTimeout(function() {
+      alert(message);
+    }, 50);
+  }
+
+  // Aggiorno il contenuto della card per visualizzare i punteggi aggiornati
+  document.getElementById("barney-score").innerHTML = barneyScore;
+  document.getElementById("frink-score").innerHTML = frinkScore;
+  document.getElementById("tie-score").innerHTML = tieScore;
 }
