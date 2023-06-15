@@ -2,3 +2,8 @@
     MAIN
 */
 
+.container {max-width: 37.5rem;}
+
+.form-group {margin-bottom: 1.25rem;}
+
+.btn {width: 30%;}
